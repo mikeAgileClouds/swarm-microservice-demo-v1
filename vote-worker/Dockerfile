@@ -1,3 +1,4 @@
+#Base Image is Java
 FROM java:7
 
 RUN apt-get update -qq && apt-get install -y maven && apt-get clean
