@@ -1,6 +1,5 @@
 # Using official python runtime base image
 FROM python:2.7
-forcing docker file to fail ...
 
 # Set the application directory
 WORKDIR /app
