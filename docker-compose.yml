@@ -9,7 +9,6 @@ services:
     build: web-vote-app
     environment:
       WEB_VOTE_NUMBER: "01"
-      constraint:node: "=frontend01"
 
   vote-worker:
     build: vote-worker
