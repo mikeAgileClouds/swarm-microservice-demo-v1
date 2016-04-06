@@ -9,8 +9,8 @@ import random
 import json
 import time
 
-option_a = os.getenv('OPTION_A', "Cats")
-option_b = os.getenv('OPTION_B', "Dogs")
+option_a = os.getenv('OPTION_A', "Training")
+option_b = os.getenv('OPTION_B', "Pilot")
 hostname = socket.gethostname()
 
 db_server = "redis%s" % os.environ['WEB_VOTE_NUMBER']
