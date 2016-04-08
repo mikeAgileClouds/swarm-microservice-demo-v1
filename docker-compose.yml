@@ -15,7 +15,7 @@ services:
         INTERLOCK_CONFIG: |
             ListenAddr = ":8080"
             DockerURL = "tcp://54.183.181.250:3375"
-            #  DockerURL = "${SWARM_HOST}"
+            
             [[Extensions]]
             Name = "nginx"
             ConfigPath = "/etc/conf/nginx.conf"
@@ -24,7 +24,6 @@ services:
             Port = 80
     volumes:
         - nginx:/etc/conf
-        # - /var/lib/boot2docker:/var/lib/boot2docker:ro
         - /var/tmp/config.toml:/bin/config.toml
 
   nginx:
@@ -67,3 +66,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pg8675309
+
+volumes:
+  nginx:
+    driver: local
