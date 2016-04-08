@@ -4,7 +4,8 @@
 
 version: '2'
 
-interlock:
+services:
+  interlock:
     image: ehazlett/interlock:1.0.1
     command: -D run
     tty: true
@@ -26,7 +27,7 @@ interlock:
         # - /var/lib/boot2docker:/var/lib/boot2docker:ro
         - /var/tmp/config.toml:/bin/config.toml
 
-nginx:
+  nginx:
     image: nginx:latest
     entrypoint: nginx
     command: -g "daemon off;" -c /etc/conf/nginx.conf
@@ -39,7 +40,6 @@ nginx:
     volumes:
         - nginx:/etc/conf
 
-services:
   web-vote-app:
     image: swarmdemo/web-vote-app
     ports:
