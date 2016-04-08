@@ -14,5 +14,7 @@ ADD . /app
 # Make port 80 available for links and/or publish
 EXPOSE 80
 
+ENV TESTING=withMike
+
 # Define our command to be run when launching the container
 CMD ["python", "app.py"]
