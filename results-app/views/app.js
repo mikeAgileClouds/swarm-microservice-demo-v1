@@ -9,6 +9,7 @@ var option2 = "RI";
 
 app.controller('statsCtrl', function($scope){
   var animateStats = function(a,b){
+    
     if(a+b>0){
       var percentA = a/(a+b)*100;
       var percentB = 100-percentA;
@@ -37,6 +38,8 @@ app.controller('statsCtrl', function($scope){
        animateStats(a, b);
 
        $scope.$apply(function() {
+          $scope.option1 = option1;
+          $scope.option2 = option2;
          if(a + b > 0){
            $scope.aPercent = a/(a+b) * 100;
            $scope.bPercent = b/(a+b) * 100;
