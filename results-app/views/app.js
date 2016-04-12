@@ -4,6 +4,9 @@ var socket = io.connect({transports:['polling']});
 var bg1 = document.getElementById('background-stats-1');
 var bg2 = document.getElementById('background-stats-2');
 
+var option1 = "Training";
+var option2 = "RI";
+
 app.controller('statsCtrl', function($scope){
   var animateStats = function(a,b){
     if(a+b>0){
