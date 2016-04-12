@@ -47,7 +47,7 @@ services:
       WEB_VOTE_NUMBER: "01"
     labels:
       - "interlock.hostname=webvote"
-      - "interlock.domain=local"
+      - "interlock.domain=git2swarm.com"
 
   vote-worker:
     image: swarmdemo/vote-worker
@@ -63,7 +63,7 @@ services:
     image: swarmdemo/results-app
     labels:
       - "interlock.hostname=results"
-      - "interlock.domain=local"
+      - "interlock.domain=git2swarm.com"
 
 
   redis01:
