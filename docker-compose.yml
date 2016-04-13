@@ -32,6 +32,8 @@ services:
     command: -g "daemon off;" -c /etc/conf/nginx.conf
     ports:
         - 80:80
+    environment:
+        - "constraint:node==ip-172-31-4-241"
     labels:
         - "interlock.ext.name=nginx"
     links:
